@@ -1,0 +1,45 @@
+﻿<Window x:Class="HW16012018.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW16012018"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        
+        
+    <TabControl>
+        <TabItem Header="Group">
+
+                <StackPanel>
+                    <Button Click="GetUsers_Click" Content="Get Users"></Button>
+                
+            
+                <ListView x:Name="ModelListView">
+                    <ListView.View>
+                        <GridView>
+                            <GridView.Columns>
+                                    <GridViewColumn Header="ModelId" x:Name="ModelId" DisplayMemberBinding="{Binding ModelId}"></GridViewColumn>
+
+                            </GridView.Columns>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                </StackPanel>
+            </TabItem>
+        <TabItem Header="Status">
+            
+        </TabItem>
+        <TabItem Header="Pavilion">
+            
+        </TabItem>
+        <TabItem Header="Model">
+            
+        </TabItem>
+    </TabControl>
+    
+ 
+        
+    </Grid>
+</Window>
