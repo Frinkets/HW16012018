@@ -42,9 +42,15 @@ namespace HW16012018
 
             //da.Fill(ds);
             //da.Fill(ds, "ModelId");
+           
 
-            //ModelListView.ItemsSource = ds.Tables["ModelId"].Rows;
-
+            //ModelListView.ItemsSource = ds.Tables["Table"].Rows;
+            foreach(var item in ds.Tables["Table"].Rows)
+            {
+             s sn = new s();
+                  sn.svoistvo1 = item.Array[2]; 
+            }
+            
             DataTableMapping tblMap;
             DataColumnMapping colMap;
             tblMap = da.TableMappings.Add("Table", "dic_Model");
@@ -57,7 +63,12 @@ namespace HW16012018
           
 
         }
-
+        public class s
+        {   
+            int svoistvo1;
+            int svoistvo2;
+        
+        }
 
     }
 }
